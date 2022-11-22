@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
@@ -80,8 +79,7 @@ public class SignUpPage extends PageBase{
         setText(City, "Newyork");
         setText(ZipCode, "12345");
         setText(MobileNumber, "01020304050");
-        //Actions actions = new Actions(driver);
-        //actions.moveToElement(SubmitBtn).click().perform();
+
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("arguments[0].scrollIntoView()", SubmitBtn);
         clickBtn(SubmitBtn);
